@@ -27,4 +27,4 @@ RUN pip install --no-cache-dir --only-binary=:all: \
     && rm -rf python/pandas/docs
 
 # Zip for Lambda Layer
-RUN zip -r9 /layer.zip python
+# RUN zip -r9 /layer.zip python

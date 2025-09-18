@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '*'   # triggers on every tag push
+  workflow_dispatch:
 
 jobs:
   build:
