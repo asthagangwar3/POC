@@ -1,2 +1,6 @@
 snowflake-connector-python
+cachetools
 pandas
+cryptography>=42.0
+aiohttp
+
