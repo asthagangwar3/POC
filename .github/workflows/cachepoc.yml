@@ -34,5 +34,6 @@ jobs:
       - name: Build Lambda Layer
         if: ${{ steps.docker-layer-cache.outputs.cache-hit != 'true' }}
         run: |
+          echo "The value of ${{ steps.docker-layer-cache.outputs.cache-hit }}"
           chmod +x ./layer/build.sh
           ./layer/build.sh
