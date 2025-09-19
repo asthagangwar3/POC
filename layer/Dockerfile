@@ -25,6 +25,7 @@ RUN pip install --no-cache-dir --only-binary=:all: \
     && find python -type f -name "*.pyc" -delete \
     && rm -rf python/pandas/tests || true \
     && rm -rf python/pandas/docs
-
+    
+EXPOSE 3317
 # Zip for Lambda Layer
 # RUN zip -r9 /layer.zip python
