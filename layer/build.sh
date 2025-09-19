@@ -18,7 +18,7 @@ if [ ! -f "$REQUIREMENTS" ]; then
   exit 1
 fi
 
-# Create build dir
+# Create build directory
 mkdir -p "$BUILD_DIR"
 
 echo "🐳 Pulling cache and building Docker image"
