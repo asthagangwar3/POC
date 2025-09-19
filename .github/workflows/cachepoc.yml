@@ -29,7 +29,12 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ hashFiles('layer/Dockerfile','layer/requirements.txt','layer/build.sh') }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-
+            
+      - name: print Lambda Layer
+        run: |
+          echo "The value of ${{ steps.docker-layer-cache.outputs.cache-hit }}"
+          
+                    
       # 3. Run build.sh (this will build + update cache)
       - name: Build Lambda Layer
         if: ${{ steps.docker-layer-cache.outputs.cache-hit != 'true' }}
